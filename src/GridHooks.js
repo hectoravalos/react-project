@@ -8,7 +8,6 @@ class gridHooks extends Component {
     this.state = {
       active: false,
       text: props.text
-      // color: props.color
     };
     this.changeColor = this.changeColor.bind(this);
   }
@@ -42,20 +41,3 @@ class gridHooks extends Component {
 }
 
 export default gridHooks;
-
-// const gridHooks = props => {
-//   const [active, setActive] = useState(true);
-//   let colorSelection = active ?  "white" : props.color;
-
-//   return (
-//     <button
-//       className="Item"
-//       style={{ backgroundColor: colorSelection }}
-//       onClick={() => setActive(!active)}
-//     >
-//       {props.text}
-//     </button>
-//   );
-// };
-
-// export default gridHooks;

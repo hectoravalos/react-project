@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import GridHooks from "./GridHooks.js";
+import ButtonContainer from "./ButtonContainer";
 import "./grid.css";
 
 class GridContainer extends Component {
@@ -7,12 +8,7 @@ class GridContainer extends Component {
     super(props);
 
     this.state = {
-      color: 'teal',
-      color1: "purple",
-      color2: "yellow",
-      color3: "red",
-      color4: "black",
-      newColor: null
+      color: null
     };
     this.changeColor = this.changeColor.bind(this);
   }
@@ -33,13 +29,14 @@ class GridContainer extends Component {
   renderButton = (count, newColor) => {
     const array = [];
     for (let index = 0; index < count; index++) {
-      array.push(<GridHooks key={index }text={index} newColor={newColor} />);
+      array.push(<GridHooks key={index} text={index} newColor={newColor} />);
     }
     return array;
   };
 
   render() {
-    const { color, color1, color2, color3, color4 } = this.state;
+    const { color } = this.state;
+    console.log("color", color);
     const rows = 8;
     const columns = 8;
     const count = rows * columns;
@@ -48,17 +45,14 @@ class GridContainer extends Component {
     for (let index = 0; index < columns; index++) {
       gridColumns += " auto";
     }
-    console.log("gridColumns", gridColumns);
+
     return (
       <div>
-        <div className="container" style={{ gridTemplateColumns: gridColumns }}>
-          {this.renderButton(count, color)} 
+        <div className="color-buttons-container">
+          <ButtonContainer changeColor={this.changeColor} activeColor={color} />
         </div>
-        <div className="color-buttons">
-          {this.colorSelect(color1)}
-          {this.colorSelect(color2)}
-          {this.colorSelect(color3)}
-          {this.colorSelect(color4)}
+        <div className="container" style={{ gridTemplateColumns: gridColumns }}>
+          {this.renderButton(count, color)}
         </div>
       </div>
     );

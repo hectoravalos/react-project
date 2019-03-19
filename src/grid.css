@@ -14,16 +14,22 @@
 
 .Item {
   border: double;
+  padding: 2rem;
 }
 
-.color-item{
-    width: 50px;
-    height: 25px;
-    margin: 8px;
+.color-item {
+  width: 50px;
+  height: 25px;
+  margin: 8px;
 }
 
-.color-buttons{
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
+.color-buttons {
+  padding: 25px;
+  margin: 4px;
+}
+
+.color-buttons-container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
 }
