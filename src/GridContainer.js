@@ -37,8 +37,8 @@ class GridContainer extends Component {
   render() {
     const { color } = this.state;
     console.log("color", color);
-    const rows = 8;
-    const columns = 8;
+    const rows = 10;
+    const columns = 10;
     const count = rows * columns;
 
     let gridColumns = "";
