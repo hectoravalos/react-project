@@ -23,6 +23,24 @@
   color: #61dafb;
 }
 
+.Tabs{
+  padding: 1rem 1rem 3rem 1rem;
+  text-align: center;
+}
+
+.f-tab {
+  color: turquoise;
+  padding: 1rem;
+}
+.gh-tab {
+  color: turquoise;
+  padding: 1rem;
+}
+.g-tab {
+  color: turquoise;
+  padding: 1rem;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

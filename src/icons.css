@@ -1,0 +1,94 @@
+.icon-title {
+  font-style: italic;
+  color: gold;
+  padding: 2rem;
+  text-align: center;
+}
+
+.form-titles {
+  padding-top: 1rem;
+}
+
+.Headline {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem 20% 0 20%;
+  border-style: groove;
+  background-color: white;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.feild-set {
+  margin: 0 20% 5% 20%;
+  background-color: white;
+  opacity: 0.9;
+}
+
+.myForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.yo {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.selectBox {
+  display: flex;
+  justify-content: center;
+}
+
+.select {
+  background-color: white;
+  opacity: 0.9;
+}
+
+.icon-buttons {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  width: 50px;
+  margin: 1px;
+  opacity: 0.9;
+}
+
+.save-button {
+  background-color: lightblue;
+  border: 2px solid yellow;
+  border-radius: 50%;
+  margin: 1rem 0 0 0;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin: 0px;
+}
+
+.radio-titles{
+  margin: 8px 0 0 0;
+}
+
+.select-style {
+  background: white;
+  font-size: 12px;
+}
+
+input[id="type"] {
+  transition: width 0.4s ease-in-out;
+}
+
+input[id="type"]:focus {
+  width: 50%;
+  background-color: lightblue;
+}
