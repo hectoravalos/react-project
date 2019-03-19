@@ -23,7 +23,14 @@
   color: #61dafb;
 }
 
-.Tabs{
+.home-header {
+  text-align: center;
+  font-size: 28px;
+  border: solid #61dafb;
+  background-color: beige;
+}
+
+.Tabs {
   padding: 1rem 1rem 3rem 1rem;
   text-align: center;
 }
@@ -32,11 +39,11 @@
   color: turquoise;
   padding: 1rem;
 }
-.gh-tab {
+.cg-tab {
   color: turquoise;
   padding: 1rem;
 }
-.g-tab {
+.h-tab {
   color: turquoise;
   padding: 1rem;
 }

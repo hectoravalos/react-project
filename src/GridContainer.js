@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import GridHooks from "./GridHooks.js";
+import GridPanels from "./GridPanels.js";
 import ButtonContainer from "./ButtonContainer";
 import "./grid.css";
 
@@ -29,7 +29,7 @@ class GridContainer extends Component {
   renderButton = (count, newColor) => {
     const array = [];
     for (let index = 0; index < count; index++) {
-      array.push(<GridHooks key={index} text={index} newColor={newColor} />);
+      array.push(<GridPanels key={index} text={index} newColor={newColor} />);
     }
     return array;
   };
@@ -37,8 +37,8 @@ class GridContainer extends Component {
   render() {
     const { color } = this.state;
     console.log("color", color);
-    const rows = 10;
-    const columns = 10;
+    const rows = 12;
+    const columns = 12;
     const count = rows * columns;
 
     let gridColumns = "";

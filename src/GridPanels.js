@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./grid.css";
 
-class gridHooks extends Component {
+class GridPanels extends Component {
   constructor(props) {
     super(props);
 
@@ -40,4 +40,4 @@ class gridHooks extends Component {
   }
 }
 
-export default gridHooks;
+export default GridPanels;

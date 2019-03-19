@@ -164,25 +164,11 @@ class FormComponent extends Component {
 
   addValue = () => {
     const { type, color, friendly, limbs, dob } = this.state;
-    console.log("type", type);
-    console.log("color", color);
-    console.log("friendly", friendly);
-    console.log("limbs", limbs);
-    console.log("dob", dob);
-    // const input1 = document.getElementById("type");
-    // const input2 = document.getElementById("color");
-    // const input3 = document.querySelector("input[name=friendly]:checked");
-    // const input4 = document.getElementById("limbs");
-    // const input5 = document.getElementById("dob");
     const select = document.getElementById("select");
     const option = document.createElement("option");
     option.value = color.toLowerCase();
     option.text = color;
-
     const limbValue = parseInt(limbs, 10);
-    // const buttonValue = input3 ? input3.value : "";
-    // const friendlyValue = buttonValue.toLowerCase() === "true" ? true : false;
-
     const colors = icons.map(icon => icon.color);
 
     if (type === "") {
@@ -198,14 +184,6 @@ class FormComponent extends Component {
     } else if (color !== "") {
       document.getElementById("color-error").innerHTML = "";
     }
-
-    // if (friendly === "") {
-    //   document.getElementById("radio-error").innerHTML =
-    //     "Selection is required!";
-    //   return false;
-    // } else if (friendly !== "") {
-    //   document.getElementById("radio-error").innerHTML = "";
-    // }
 
     if (limbs === "") {
       document.getElementById("limb-error").innerHTML = "Limbs is required!";
@@ -304,20 +282,6 @@ class FormComponent extends Component {
             </select>
             <p id="color-error" className="error" />
             <div className="form-titles">Friendly?:</div>
-            {/* <p className="radio-titles">True</p>
-            <input
-              type="radio"
-              name="friendly"
-              value="true"
-              onChange={this.handleFriendlyChange}
-            />
-            <p className="radio-titles">False</p>
-            <input
-              type="radio"
-              name="friendly"
-              value="false"
-              onChange={this.handleFriendlyChange}
-            /> */}
             <input
               type="checkbox"
               value={friendly}

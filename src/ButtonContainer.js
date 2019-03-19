@@ -17,7 +17,8 @@ class ButtonContainer extends Component {
         "black",
         "blue",
         "pink",
-        "brown"
+        "brown",
+        "steelblue"
       ],
       selected: false
     };
