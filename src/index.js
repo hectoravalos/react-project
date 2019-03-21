@@ -1,15 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import { Provider } from "react-redux";
+import configureStore from "./store"
 import App from "./App";
 import FormComponent from "./IconForm/icon-form.js";
 import * as serviceWorker from "./serviceWorker";
 import { Route, BrowserRouter as Router } from "react-router-dom";
 import GridContainer from "./ColorGrid/GridContainer";
 import CalcBoil from "./Boil/CalcBoil";
+import "./index.css";
 // import Home from "./Home"
 
 const routing = (
+  <Provider store={configureStore()}>
   <Router>
     <div>
       <Route path="/" component={App} />
@@ -18,6 +21,7 @@ const routing = (
       <Route path="/calc" component={CalcBoil} />
     </div>
   </Router>
+  </Provider>
 );
 
 ReactDOM.render(routing, document.getElementById("root"));

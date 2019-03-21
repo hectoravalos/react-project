@@ -1,10 +1,16 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 // import logo from "./logo.svg";
+import simpleAction from "./actions/simpleAction";
 import "./App.css";
 import { Link } from "react-router-dom";
 
 class App extends Component {
+  simpleAction = e => {
+    this.props.simpleAction();
+  };
   render() {
+    console.log("this.props", this.props);
     return (
       <div>
         <div className="Tabs">
@@ -21,9 +27,30 @@ class App extends Component {
             Calculation
           </Link>
         </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            padding: "1rem"
+          }}
+        >
+          <button style={{ padding: "1rem" }} onClick={this.simpleAction}>
+            Test Redux Simple Action
+          </button>
+        </div>
       </div>
     );
   }
 }
+const mapStateToProps = state => ({
+  ...state
+});
 
-export default App;
+const mapDispatchToProps = dispatch => ({
+  simpleAction: () => dispatch(simpleAction())
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);
