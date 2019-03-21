@@ -17,8 +17,10 @@ class App extends Component {
           <Link className="cg-tab" to="/color-grid">
             Color Grid
           </Link>
+          <Link className="c-tab" to="/calc">
+            Calculation
+          </Link>
         </div>
-        <div className="home-header">Welcome to the React App!</div>
       </div>
     );
   }
