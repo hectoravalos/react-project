@@ -25,7 +25,6 @@ class GridPanels extends Component {
 
   render() {
     const { active, text, color } = this.state;
-
     const colorSelection = !active ? "white" : color;
 
     return (

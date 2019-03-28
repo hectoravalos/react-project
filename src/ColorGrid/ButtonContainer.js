@@ -31,7 +31,6 @@ class ButtonContainer extends Component {
   render() {
     const { colorList } = this.state;
     const { changeColor, activeColor } = this.props;
-
     return (
       <div>
         {colorList.map((color, index) => {

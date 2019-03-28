@@ -1,29 +1,19 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 import GridPanels from "./GridPanels.js";
 import ButtonContainer from "./ButtonContainer";
 import "./grid.css";
+import setColor from "../actions/Color";
 
 class GridContainer extends Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      color: null
-    };
     this.changeColor = this.changeColor.bind(this);
   }
-  changeColor = o => {
-    this.setState({ color: o });
-  };
 
-  colorSelect = color => {
-    return (
-      <button
-        className="color-item"
-        style={{ backgroundColor: color }}
-        onClick={() => this.changeColor(color)}
-      />
-    );
+  changeColor = o => {
+    this.props.setColor(o);
   };
 
   renderButton = (count, newColor) => {
@@ -35,8 +25,7 @@ class GridContainer extends Component {
   };
 
   render() {
-    const { color } = this.state;
-    console.log("color", color);
+    const { color } = this.props;
     const rows = 12;
     const columns = 12;
     const count = rows * columns;
@@ -58,5 +47,15 @@ class GridContainer extends Component {
     );
   }
 }
+const mapStateToProps = state => ({
+  color: state.simpleReducer.currentColor
+});
+console.log("Color.setColor", setColor);
+const mapDispatchToProps = dispatch => ({
+  setColor: bindActionCreators(setColor, dispatch)
+});
 
-export default GridContainer;
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(GridContainer);

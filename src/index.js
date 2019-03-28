@@ -19,6 +19,7 @@ const routing = (
       <Route path="/form" component={FormComponent} />
       <Route path="/color-grid" component={GridContainer} />
       <Route path="/calc" component={CalcBoil} />
+      {/* <Route path="/counter" component={Counter} /> */}
     </div>
   </Router>
   </Provider>

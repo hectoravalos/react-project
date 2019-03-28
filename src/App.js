@@ -10,7 +10,6 @@ class App extends Component {
     this.props.simpleAction();
   };
   render() {
-    console.log("this.props", this.props);
     return (
       <div>
         <div className="Tabs">
